@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="ru-RU">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=1230">
+  <title>Связаться со мной</title>
+  <link rel="stylesheet" href="bower/normalize-css/normalize.css">
+  <link rel="stylesheet" href="fonts/fonts.css">
+  <link rel="stylesheet" href="css/main.css">
+   <!--[if lt IE 9]>
+        <script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+    <![endif]-->
+</head>
+<body>
+  <div class="wrapper">
+
+    <!-- begin header  -->
+    <header class="header">
+      <div class="container-header clearfix">
+        <a href="/" class="logo left">
+          <img src="img/logo.png" alt="Логотип" class="logo-img">
+          <span class="logo-text">Loftschool. От мыслителя к создателю</span>
+        </a>
+        <ul class="social right">
+          <li class="social-item">
+            <a href="https://vk.com/naifa" class="social-item-link social-link-vk">ВКонтакте</a>
+          </li>
+          <li class="social-item">
+            <a href="#" class="social-item-link social-link-tw">Twitter</a>
+          </li>
+          <li class="social-item">
+            <a href="https://www.facebook.com/evgeniyamalyshkina" class="social-item-link social-link-fb">Facebook</a>
+          </li>
+          <li class="social-item">
+            <a href="https://github.com/jenyamalyshkina" class="social-item-link social-link-gh">Github</a>
+          </li>
+        </ul>
+      </div>
+    </header>
+    <!-- end header -->
+
+   <!-- begin main  -->
+<main class="content">
+  <div class="container-content clearfix">
+    <aside class="sidebar left">
+      <!-- begin nav  -->
+      <nav class="nav">
+        <ul class="nav-list">
+          <li class="nav-list-item">
+            <a href="index.html" class="nav-item-link">Обо мне</a>
+          </li>
+          <li class="nav-list-item">
+            <a href="projects.html" class="nav-item-link">Мои работы</a>
+          </li>
+          <li class="nav-list-item nav-item-active">
+            <a href="writeme.html" class="nav-item-link">Связаться со мной</a>
+          </li>
+        </ul>
+      </nav>
+
+      <!-- end nav -->
+      <!-- begin contacts  -->
+      <div class="contacts">
+        <h2 class="contacts-title">Контакты</h2>
+        <ul class="contacts-list">
+          <li class="contacts-list-item">
+            <a href="mailto:evgeniyamalyshkina@gmail.com" class="contacts-item-link contacts-link-mail">evgeniyamalyshkina@ gmail.com</a>
+          </li>
+          <li class="contacts-list-item">
+            <a href="tel://8-923-506-4402" class="contacts-item-link contacts-link-phone">+79235064402</a>
+          </li>
+          <li class="contacts-list-item">
+            <a href="skype:evgeniyamalyshkina" class="contacts-item-link contacts-link-skype">evgeniyamalyshkina</a>
+          </li>
+        </ul>
+      </div>
+      <!-- end contacts -->
+    </aside>
+
+    <!-- begin content-area  -->
+    <div class="content-area">
+      <section class="content-section content-section-writeme right clearfix">
+        <h2 class="section-writeme-header">
+        У вас интересный проект? Напишите мне</h2>
+        <div class="content-writeme-wrap">
+          <form action="#" class="writeme-block-form" method="post">
+            <fieldset class="writeme-form-item form-item-info">
+              <div class="item-wrap right">
+                <label for="yourmail" class="form-item-label">Email</label>
+                <div class="input-wrap">
+                  <input type="text" id="yourmail" name="email" class="form-item-field" placeholder="Куда мне писать" required>
+                </div>
+              </div>
+              <div class="item-wrap left">
+                <label for="yourname" class="form-item-label">Имя</label>
+                <div class="input-wrap">
+                  <input type="text" id="yourname"name="username" class="form-item-field" placeholder="Как к Вам обращаться" required>
+                </div>
+              </div>
+            </fieldset>
+            <fieldset class="writeme-form-item form-item-message">
+              <div class="item-wrap">
+                <label for="yourmessage" class="form-item-label">Сообщение</label>
+                <div class="input-wrap-textarea">
+                  <textarea id="yourmessage"name="username" class="form-item-field form-field-textarea" placeholder="Кратко, в чем суть"></textarea>
+                </div>
+              </div>
+            <fieldset class="writeme-form-item write-form-captcha">
+              <label for="yourcode" class="form-item-label label-captcha">Введите код, указанный на картинке:</label>
+              <div class="item-wrap left">
+                <div class="form-item-field captcha-field-img">
+
+                </div>
+              </div>
+              <div class="item-wrap right">
+                <div class="input-wrap">
+                  <input type="text" id="yourcode" name="email" class="form-item-field captcha-field-input" placeholder="Введите код" required>
+                </div>
+              </div>
+            </fieldset>
+            <div class="writeme-form-buttons clearfix">
+              <button type="submit" class="form-item-button button-submit left">Отправить</button>
+              <button type="reset" class="form-item-button button-reset right">Очистить</button>
+            </div>
+          </form>
+        </div>
+      </section>
+    </div>
+    <!-- end content-area  -->
+  </div>
+</main>
+<!-- end main -->
+  </div>
+
+  <!-- begin footer  -->
+  <footer class="footer">
+    <div class="container-footer">
+      <a href="#" class="footer-login">Войти</a>
+      <span class="footer-copyright">&copy; 2016. Это мой сайт, пожалуйста, не копируйте и не воруйте его</span>
+    </div>
+  </footer>
+  <!-- end footer -->
+
+  <script src="bower/jquery/jquery.js"></script>
+  <script src="js/main.js"></script>
+</body>
+</html>
