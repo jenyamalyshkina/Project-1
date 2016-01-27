@@ -241,6 +241,10 @@ body{
   font-size: 21px;
 }
 
+.contacts-list-item {
+  position: relative;
+}
+
 .contacts-item-link {
   display: block;
   color: white;
@@ -252,19 +256,44 @@ body{
   text-decoration: underline;
 }
 
-.contacts-link-mail{
-  background: #41b9d4 url("../img/mail.png") 42px center no-repeat;
+.contacts-item-mail { background-color: #41b9d4; }
+
+.contacts-item-mail:before {
+  content: ' ';
+  position: absolute;
+  left: 40px;
+  top: 50%;
+  margin-top: -8px;
+  width: 21px;
+  height: 16px;
+  background: url("../img/content-sprite.png") 0 -55px;
 }
 
-.contacts-link-phone {
-  background: #48cbe8 url("../img/phone.png") 42px center no-repeat;
+.contacts-item-phone { background: #48cbe8; }
+
+.contacts-item-phone:before {
+  content: ' ';
+  position: absolute;
+  left: 40px;
+  top: 50%;
+  margin-top: -10px;
+  width: 19px;
+  height: 20px;
+  background: url("../img/content-sprite.png") 0 -103px;
 }
 
-.contacts-link-skype {
-  background: #51daf8 url("../img/skype.png") 42px center no-repeat;
+.contacts-item-skype { background: #51daf8; }
+
+.contacts-item-skype:before {
+  content: ' ';
+  position: absolute;
+  left: 40px;
+  top: 50%;
+  margin-top: -10px;
+  width: 20px;
+  height: 20px;
+  background: url("../img/content-sprite.png") 0 -123px;
 }
-
-
 /*Стили для content*/
 
 /*content aboutme*/
@@ -348,14 +377,44 @@ body{
 }
 
 .content-block-info {
+  position: relative;
   margin-bottom: 22px;
   padding-left: 67px;
   min-height: 38px;
 }
 
-.icon-work { background: url(../img/work.png) no-repeat left center; }
-.icon-course { background: url(../img/course.png) no-repeat 6px center; }
-.icon-education { background: url(../img/education.png) no-repeat left center; }
+.icon-work:before {
+  content: ' ';
+  position: absolute;
+  left: 0;
+  top: 50%;
+  margin-top: -17px;
+  width: 36px;
+  height: 34px;
+  background: url("../img/content-sprite.png") 0 -143px;
+}
+
+.icon-course:before {
+  content: ' ';
+  position: absolute;
+  left: 8px;
+  top: 50%;
+  margin-top: -16px;
+  width: 26px;
+  height: 32px;
+  background: url("../img/content-sprite.png") 0 0;
+}
+
+.icon-education:before {
+  content: ' ';
+  position: absolute;
+  left: 0;
+  top: 50%;
+  margin-top: -16px;
+  width: 41px;
+  height: 23px;
+  background: url("../img/content-sprite.png") 0 -32px;
+}
 
 .block-info-title {
   display: block;
@@ -452,10 +511,9 @@ body{
 }
 
 .projects-add-item {
+  display: block;
   position: relative;
-  width: 182px;
   height: 129px;
-  background: url("../img/newsite.png") no-repeat center 35px;
   cursor: pointer;
   border: 1px dashed #3ba8c0;
   -webkit-border-radius: 4px;
@@ -468,6 +526,7 @@ body{
 }
 
 .project-add-link {
+  display: block;
   position: absolute;
   top: 80px;
   width: 100%;
@@ -475,6 +534,16 @@ body{
   color: #3ba8c0;
   font-size: 13px;
   font-family: "fira_sanslight", "Arial Narrow", sans-serif;
+}
+
+.projects-add-item:before {
+  content: ' ';
+  position: absolute;
+  left: 75px;
+  top: 35px;
+  width: 32px;
+  height: 32px;
+  background: url("../img/content-sprite.png") 0 -71px;
 }
 
 /*content writeme*/
