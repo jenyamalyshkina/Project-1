@@ -88,6 +88,7 @@ body{
 
 .wrapper {
   position: relative;
+  min-width: 1200px;
   min-height: 100%;
   height: auto!important;
   overflow: hidden;
@@ -119,7 +120,6 @@ body{
 
 .header {
   position: relative;
-  min-width: 1200px;
   height: 110px;
   background: #eff3f7;
 }
@@ -182,7 +182,6 @@ body{
 
 .container-content {
   width: 960px;
-  height: 100%;
   margin: 0 auto;
   padding-top: 39px;
 }
@@ -272,7 +271,7 @@ body{
 
 .content-section {
   width: 650px;
-  margin: 0 0 25px 60px;
+  margin-bottom: 60px;
   font-family: "fira_sansbook", "Arial Narrow", sans-serif;
   font-size: 17px;
   background-color: #eff3f7;
@@ -282,6 +281,7 @@ body{
 }
 
 .content-section-title {
+  display: inline-block;
   padding: 0 22px;
   margin-bottom: 25px;
   font-size: 27px;
@@ -291,9 +291,6 @@ body{
 }
 
 .content-block-wrap {
-  height: 100%;
-  clear: both;
-  overflow: hidden;
   margin: 0 50px 40px 55px;
 }
 
@@ -376,9 +373,6 @@ body{
 
 .content-projects-wrap {
   width: 640px;
-  height: 100%;
-  clear: both;
-  overflow: hidden;
   margin: 0 auto;
   font-size: 0;
 }
@@ -391,8 +385,8 @@ body{
   margin: 0 15px 40px;
 }
 
-.project-img-container {
-  cursor: pointer;
+.project-link-container {
+  display: block;
   border: 2px solid #3ba8c0;
   -webkit-border-radius: 4px;
     -moz-border-radius: 4px;
@@ -432,7 +426,7 @@ body{
   opacity: .20;
 }
 
-.projects-item:hover .project-img-container{
+.projects-item:hover .project-link-container{
   background-color: rgba(1, 108, 164, 0.75);
 }
 
@@ -511,6 +505,7 @@ body{
 
 .writeme-form-item {
   margin-bottom: 15px;
+  font-family: "fira_sanslight", "Arial Narrow", sans-serif;
 }
 
 .input-wrap-textarea {
@@ -528,7 +523,6 @@ body{
 .form-item-label {
   display: block;
   line-height: 26px;
-  font-family: "fira_sanslight", "Arial Narrow", sans-serif;
   font-size: 19px;
   color: #959aa8;
 }
@@ -540,16 +534,15 @@ body{
 
 .form-item-field {
   display: block;
-  padding: 4px 10px;
+  padding: 5px 10px;
   width: 100%;
   height: 40px;
-  font-size: 13px;
-  font-family: "fira_sanslight", "Arial Narrow", sans-serif;
+  font-size: 15px;
+  color: #959aa8;
   border: 1px solid #48cbe8;
   -webkit-border-radius: 3px;
     -moz-border-radius: 3px;
       border-radius: 3px;
-
 }
 
 .form-field-textarea {
@@ -558,9 +551,9 @@ body{
   resize: none;
 }
 
-::-webkit-input-placeholder { color: #48cbe8; }
-::-moz-placeholder { color: #48cbe8; }
-:-ms-input-placeholder { color: #48cbe8; }
+::-webkit-input-placeholder { color: #48cbe8; font-size: 13px; }
+::-moz-placeholder { color: #48cbe8; font-size: 13px; }
+:-ms-input-placeholder { color: #48cbe8; font-size: 13px; }
 
 .captcha-field-img {
   width: 191px;
