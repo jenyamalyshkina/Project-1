@@ -1,3 +1,1 @@
-$(function() {
-console.log('Файл main.js успешно загружен')
-});
+$('input, textarea').placeholder();
