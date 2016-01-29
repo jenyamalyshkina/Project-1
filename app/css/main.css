@@ -345,6 +345,7 @@ body{
 
 .userinfo-item-label {
   display: inline-block;
+  max-width: 170px;
   vertical-align: top;
   margin-right: 12px;
   font-family: "fira_sansmedium", "Arial Narrow", sans-serif;
@@ -473,10 +474,13 @@ body{
 }
 
 .project-link {
-  padding: 0 4px;
+  display: block;
+  padding: 3px 4px;
+  margin: 0 5px;
   font-size: 12px;
   font-family: "fira_sansbook", "Arial Narrow", sans-serif;
   color: white;
+  word-wrap: break-word;
   border: 2px solid #eff3f7;
   -webkit-border-radius: 5px;
     -moz-border-radius: 5px;
@@ -503,11 +507,12 @@ body{
 
 .project-info-link {
   display: block;
+  padding: 12px 0;
   text-align: center;
   color: #3ba8c0;
   font-size: 13px;
   font-family: "fira_sanslight_italic", "Arial Narrow", sans-serif;
-  line-height: 40px;
+  word-wrap: break-word;
 }
 
 .project-info-descr {
@@ -563,7 +568,6 @@ body{
 .section-writeme-header {
   display: block;
   padding: 50px 56px 43px;
-  height: 137px;
   margin-bottom: 45px;
   background-color: #48cbe8;
   border-bottom: 17px solid #67dffa;
