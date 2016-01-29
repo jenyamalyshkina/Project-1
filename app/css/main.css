@@ -630,6 +630,8 @@ body{
 ::-webkit-input-placeholder { color: #48cbe8; font-size: 13px; }
 ::-moz-placeholder { color: #48cbe8; font-size: 13px; }
 :-ms-input-placeholder { color: #48cbe8; font-size: 13px; }
+.placeholder { color: #48cbe8; }
+
 
 .captcha-field-img {
   width: 191px;
