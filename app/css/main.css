@@ -321,6 +321,10 @@ body{
   margin: 0 50px 40px 55px;
 }
 
+.content-block-userpic {
+  padding-top: 10px;
+}
+
 .content-block-userinfo {
   width: 360px;
 }
