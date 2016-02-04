@@ -134,7 +134,7 @@
                   <p class="project-info-descr">Информация о четвертом проекте</p>
                 </div>
               </li><li class="projects-item">
-                    <a href="#" class="projects-add-item">
+                    <a href="#" id="popup-go" class="projects-add-item">
                       <span class="project-add-link">Добавить проект</span>
                     </a>
               </li>
@@ -145,6 +145,37 @@
   </div>
 </main>
 <!-- end main -->
+<div id="projects-add-popup">
+  <div class="popup-header">
+    <div class="popup-title">Добавление проекта</div>
+    <button id="popup-close"></button>
+  </div>
+  <div class="popup-body-wrap">
+    <form action="" class="popup-body">
+      <div class="popup-form-item">
+        <label for="projectName" class="popup-form-label">Название проекта</label>
+        <input id="projectName" name="projectName" type="text" placeholder="Введите название" class="form-item-field">
+      </div>
+      <div class="popup-form-item">
+        <label class="popup-form-label">Картинка проекта</label>
+          <div class="form-item-field uploadFile-wrap">
+          <span class="progect-imgName">Загрузите изображение</span>
+          <button class="selectFile-button"><input name="projectImg" type="file" class="selectFile-input"></button>
+          </div>
+      </div>
+      <div class="popup-form-item">
+        <label for="projectURL" class="popup-form-label">URL проекта</label>
+        <input id="projectURL" name="projectURL" type="text" placeholder="Добавьте ссылку" class="form-item-field">
+      </div>
+      <div class="popup-form-item">
+        <label for="projectDescr" class="popup-form-label">Описание</label>
+        <textarea id="projectDescr" name="projectDescr" type="text" placeholder="Пару слов о вашем проекте" class="form-item-field popup-form-textarea"></textarea>
+      </div>
+      <button type="submit" class="popup-form-button form-item-button button-submit">Добавить</button>
+    </form>
+  </div>
+</div>
+<div id="popup-overlay"></div>
   </div>
 
   <!-- begin footer  -->
