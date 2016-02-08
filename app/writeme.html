@@ -89,18 +89,20 @@
         <h1 class="section-writeme-header">
         У вас интересный проект? Напишите мне</h1>
         <div class="content-writeme-wrap clearfix">
-          <form action="#" class="writeme-block-form" method="post">
+          <form action="#" id="writeme-form" class="writeme-block-form" method="post">
             <fieldset class="writeme-form-item form-item-info">
               <div class="item-wrap right">
                 <label for="yourmail" class="form-item-label">Email</label>
                 <div class="input-wrap">
                   <input type="text" id="yourmail" name="email" class="form-item-field" placeholder="Куда мне писать" required>
+                  <div class="form-item-error" data-title="Вы не ввели email"></div>
                 </div>
               </div>
               <div class="item-wrap left">
                 <label for="yourname" class="form-item-label">Имя</label>
                 <div class="input-wrap">
                   <input type="text" id="yourname" name="username" class="form-item-field" placeholder="Как к Вам обращаться" required>
+                  <div class="form-item-error" data-title="Вы не ввели имя"></div>
                 </div>
               </div>
             </fieldset>
@@ -109,6 +111,7 @@
                 <label for="yourmessage" class="form-item-label">Сообщение</label>
                 <div class="input-wrap-textarea">
                   <textarea id="yourmessage" name="username" class="form-item-field form-field-textarea" placeholder="Кратко, в чем суть"></textarea>
+                  <div class="form-item-error" data-title="Чем я могу помочь?"></div>
                 </div>
               </div>
             </fieldset>
@@ -122,6 +125,7 @@
               <div class="item-wrap right">
                 <div class="input-wrap">
                   <input type="text" id="yourcode" name="email" class="form-item-field captcha-field-input" placeholder="Введите код" required>
+                  <div class="form-item-error" data-title="Вы не ввели код"></div>
                 </div>
               </div>
             </fieldset>
