@@ -20,7 +20,9 @@ $('input, textarea').placeholder();
           }
         });
       $('input[type=file]').on('change', _getName);
-      $('#project-add-popup, #writeme-form').on('submit', _checkValid);
+      $('#project-add-popup').on('submit', _checkValid);
+      $('#writeme-form').on('submit', _checkValid);
+      $('#writeme-form').on('reset', _clearForm);
     };
 
 // Вызываем popup
@@ -78,10 +80,17 @@ $('input, textarea').placeholder();
             $(this).removeClass('form-empty-field');
             $(this).next('.form-item-error').css('display', 'none');
           });
+        });
+      };
 
-      });
-    };
-
+// Убираем ошибки после нажатия Reset
+  var _clearForm = function () {
+    $(this).find('.form-item-field').each(function() {
+      $(this).val();
+      $(this).removeClass('form-empty-field');
+      $(this).next('.form-item-error').css('display', 'none');
+  });
+};
 // Возвращаем объект (публичные методы)
   return {
     init: init

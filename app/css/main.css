@@ -624,7 +624,7 @@ body{
 .form-item-field {
   position: relative;
   display: block;
-  padding: 12px 10px;
+  padding: 8px 10px;
   width: 100%;
   height: 40px;
   font-size: 15px;
@@ -639,8 +639,8 @@ body{
 
 .popup-form-textarea {
   height: 111px;
-  padding-top: 13px;
   resize: none;
+  overflow: hidden;
 }
 
 .popup-form-button {
@@ -654,6 +654,8 @@ body{
   overflow: hidden;
   color: #48cbe8;
   font-size: 13px;
+  height: 40px;
+  padding: 14px 10px;
 }
 
 .selectFile-button {
@@ -717,26 +719,48 @@ body{
   background-color: #f97e76;
   border-radius: 4px;
   white-space: nowrap;
+  z-index: 4;
 }
 
 .form-item-error:after {
   content: '';
   position: absolute;
   display: block;
+  width: 0; height: 0;
   top: -26px;
   left: -8px;
   border: 6px solid #f97e76;
-  border-right-width: 0;
+  border-color: transparent;
   border-left-color: #f97e76;
-  border-top-color: transparent;
-  border-bottom-color: transparent;
 }
 
 #projectDescr + .form-item-error:before { bottom: 45px; }
 #projectDescr + .form-item-error:after { top: -64px; }
 
-#yourmail + .form-item-error:before { }
-#yourmail + .form-item-error:after { }
+#yourname + .form-item-error:before { right: 200px; }
+
+#yourmail + .form-item-error:before { right: -150px; }
+#yourmail + .form-item-error:after {
+  left: 188px;
+  border-left-color: transparent;
+  border-right-color: #f97e76;
+}
+
+#yourmessage + .form-item-error:before {
+  top: -103px;
+  right: 410px;
+  height: 13px;
+}
+
+#yourmessage + .form-item-error:after { top: -95px; }
+
+#yourcode + .form-item-error:before { right: -139px; bottom: 2px;}
+#yourcode + .form-item-error:after {
+  left: 189px;
+  top: -21px;
+  border-left-color: transparent;
+  border-right-color: #f97e76;
+}
 
 /*content writeme*/
 
@@ -795,24 +819,17 @@ body{
 
 .form-field-textarea {
   height: 182px;
-  padding-top: 12px;
   resize: none;
+  overflow: hidden;
 }
 
-::-webkit-input-placeholder { color: #48cbe8; font-size: 13px; }
-::-moz-placeholder { color: #48cbe8; font-size: 13px; }
-:-ms-input-placeholder { color: #48cbe8; font-size: 13px; height: 40px; line-height: 40px;}
+::-webkit-input-placeholder { color: #48cbe8; font-size: 13px; padding-top: 2px;}
+::-moz-placeholder { color: #48cbe8; font-size: 13px; padding-top: 2px; }
+:-ms-input-placeholder { color: #48cbe8; font-size: 13px; padding-top: 2px;}
 .placeholder {
   color: #48cbe8;
   font-size: 13px;
-  height: 40px;
-  line-height: 40px;
-}
-
-.captcha-field-img {
-  width: 191px;
-  height: 79px;
-  background-color: #fbfcfd;
+  padding-top: 2px;
 }
 
 .captcha-field-input {
@@ -863,7 +880,6 @@ body{
   border-top: 1px solid #7b92a8;
   box-shadow: 0 -2px 0 #687b8f;
 }
-
 
 /*Стили для footer*/
 
