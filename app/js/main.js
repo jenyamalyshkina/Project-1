@@ -29,8 +29,8 @@ $('input, textarea').placeholder();
     var _showPopup = function(event) {
       event.preventDefault();
         $('#popup-overlay').fadeIn(400, function () {
-            $('#project-add-popup').css('display', 'block').animate
-              ({opacity: 1, top: '50%'}, 200);
+            $('#project-add-popup').css('display', 'block')
+            .animate({opacity: 1, top: '50%'}, 200);
           });
     };
 
@@ -39,18 +39,24 @@ $('input, textarea').placeholder();
         $('.form-item-field').removeClass('form-empty-field');
         $('.form-item-error').css('display', 'none');
         $('#project-add-popup').animate({opacity: 0, top: '40%'},
-          200, function (){
+          200, function () {
         $(this).css('display', 'none');
         $('#popup-overlay').fadeOut(400);});
     };
 
 
 // Получаем имя файла из пути к нему
-    var _getName = function (){
+    var _getName = function () {
       var imgName = $(this).val();
         $('.progect-imgName').html(imgName.substr(imgName.lastIndexOf('\\') + 1));
         $('.progect-imgName').css({'color': '#959aa8', 'font-size': '15px'});
+
+        if ($('.progect-imgName').text() != '') {
+          $('.uploadFile-wrap').removeClass('form-empty-field');
+          $('.uploadFile-wrap').next('.form-item-error').css('display', 'none');
+        };
     };
+
 
 // Проверяем поля формы на заполненность
     var _checkValid = function(event) {
@@ -61,7 +67,7 @@ $('input, textarea').placeholder();
       $pageForm.find('.form-item-field').each(function() {
 
           //Проверяем все поля формы
-          if($(this).val() != '') {
+          if($.trim($(this).val()) != '') {
             $(this).removeClass('form-empty-field');
             $(this).next('.form-item-error').css('display', 'none');
 
@@ -76,7 +82,7 @@ $('input, textarea').placeholder();
           };
 
           // Убираем ошибку после клика на пустом поле
-          $(this).click(function() {
+          $(this).keydown(function(){
             $(this).removeClass('form-empty-field');
             $(this).next('.form-item-error').css('display', 'none');
           });
