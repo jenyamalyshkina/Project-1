@@ -14,7 +14,7 @@ $('input, textarea').placeholder();
       $('#popup-go').on('click', _showPopup);
       $('#popup-close, #popup-overlay').on('click', _hidePopup);
       $(document).on('keydown',
-        function(event){
+        function(event) {
           if (event.keyCode == 27) {
             _hidePopup();
           }
@@ -44,7 +44,6 @@ $('input, textarea').placeholder();
         $('#popup-overlay').fadeOut(400);});
     };
 
-
 // Получаем имя файла из пути к нему
     var _getName = function () {
       var imgName = $(this).val();
@@ -56,7 +55,6 @@ $('input, textarea').placeholder();
           $('.uploadFile-wrap').next('.form-item-error').css('display', 'none');
         };
     };
-
 
 // Проверяем поля формы на заполненность
     var _checkValid = function(event) {
@@ -92,11 +90,11 @@ $('input, textarea').placeholder();
 // Убираем ошибки после нажатия Reset
   var _clearForm = function () {
     $(this).find('.form-item-field').each(function() {
-      $(this).val();
       $(this).removeClass('form-empty-field');
       $(this).next('.form-item-error').css('display', 'none');
   });
 };
+
 // Возвращаем объект (публичные методы)
   return {
     init: init
